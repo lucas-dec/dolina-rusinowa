@@ -34,7 +34,7 @@
   background-image: url(../images/bg-slide2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center right;
+  background-position: center;
 }
 .container-header .slide.third {
   background-image: url(../images/bg-slide3.jpg);
@@ -282,6 +282,9 @@
 }
 
 @media (min-width: 576px) {
+  .container-header {
+    height: calc(100vh - 50px);
+  }
   .container-header .slide h1 {
     padding: 1em 1.5em;
   }
