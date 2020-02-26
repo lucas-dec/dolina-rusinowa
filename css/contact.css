@@ -1,0 +1,142 @@
+.container-contact {
+  background-color: #5893d4;
+  padding-bottom: 2em;
+}
+
+.container-contact .wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.container-contact .wrapper .map {
+  margin-top: 2em;
+  width: 100%;
+  height: 300px;
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.4);
+}
+
+.container-contact .wrapper .contact-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1.5em;
+  margin-top: 1em;
+}
+
+.container-contact .wrapper .contact-information .logo h1 {
+  font-family: "PinyonScript";
+  font-size: 2.5rem;
+  color: #070d59;
+}
+
+.container-contact .contact-information .logo h1 > span {
+  color: #f7b633;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  margin-top: 1em;
+}
+
+.contact-item.phone img.icon-phone {
+  width: 30px;
+}
+
+.contact-item.phone a {
+  font-family: "Montserrat-Medium";
+  text-decoration: none;
+  margin-left: 1.5em;
+  color: #f7b633;
+}
+
+.contact-item.mail img.icon-mail {
+  width: 30px;
+}
+
+.contact-item.mail a {
+  font-family: "Montserrat-Medium";
+  margin-left: 1.5em;
+  text-decoration: none;
+  color: #f7b633;
+}
+
+.contact-item.address img.icon-address {
+  width: 30px;
+}
+
+.contact-item.address .text p {
+  font-family: "Montserrat-Medium";
+  margin-left: 1.5em;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #f7b633;
+}
+
+@media (min-width: 576px) {
+  .container-contact .wrapper .map {
+    height: 200px;
+  }
+
+  .contact-item {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-item.address .text p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 960px) {
+  .container-contact {
+    padding-top: 4em;
+    padding-bottom: 6em;
+  }
+
+  .container-contact .wrapper {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+  }
+
+  .container-contact .wrapper .map {
+    width: 60%;
+    height: 400px;
+  }
+
+  .container-contact .wrapper .contact-information {
+    width: 40%;
+    height: 100%;
+    align-items: center;
+  }
+
+  .container-contact .wrapper .contact-information .logo {
+    margin-bottom: 2em;
+  }
+
+  .container-contact .wrapper .contact-information .logo h1 {
+    font-size: 3rem;
+  }
+
+  .contact-item {
+    width: 400px;
+  }
+
+  .container-contact .wrapper .contact-information a,
+  .container-contact .wrapper .contact-information p {
+    font-size: 1.3rem;
+  }
+}

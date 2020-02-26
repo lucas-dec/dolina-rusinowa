@@ -38,29 +38,30 @@
 .container-price .content ul {
   font-family: "Montserrat-Regular";
   font-size: 0.8rem;
+  margin-top: 1em;
   padding-left: 2em;
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 .container-price .content ul li > p {
   margin: 0;
   font-size: 0.8rem;
 }
+
 .container-price .content a {
   text-decoration: none;
   color: #5893d4;
-  font-size: 1rem;
   text-transform: uppercase;
-  font-family: "Montserrat-Regular";
-  padding-top: 1em !important;
+  font-family: "Montserrat-Bold";
 }
 
 .table-wrapper {
-  width: auto;
+  width: 100%;
   margin: auto;
 }
 
 .table-wrapper table {
+  width: 100%;
   margin: 2em 0;
   font-size: 0.8rem;
   text-align: center;
@@ -80,43 +81,55 @@
 
 .table-wrapper table tr > td {
   padding: 1em;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   border-bottom: 1px solid gray;
 }
 
 @media (min-width: 576px) {
+  .container-price .content {
+    width: 80%;
+    margin: auto;
+  }
   .container-price .header {
     height: 200px;
   }
   .container-price .content p {
-    font-size: 0.6rem;
-    line-height: 1.5em;
+    font-size: 0.9rem;
   }
-  .container-price .content ul > li {
-    font-size: 0.6rem;
-    line-height: 1.5em;
-  }
-  .container-price .content ul > li > p {
-    font-size: 0.6rem;
-    line-height: 1.5em;
-  }
+
   .table-wrapper {
+    width: 70%;
     margin-left: 50%;
     transform: translateX(-50%);
   }
+}
 
-  .table-wrapper table {
+@media (min-width: 768px) {
+  .container-price .content p {
+    font-size: 1.1rem;
+  }
+  .container-price .content ul {
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+
+  .container-price .content ul li > p {
     font-size: 1rem;
   }
+  .table-wrapper {
+    font-size: 1rem;
+  }
+
   .table-wrapper table thead {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 2em;
+  }
+  .table-wrapper table th {
+    width: 50%;
   }
 
-  .table-wrapper table th {
-    width: 300px;
-  }
   .table-wrapper table tr > td {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
