@@ -1,0 +1,1225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url('../fonts/Montserrat/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url('../fonts/Montserrat/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: "PinyonScript";
+    src: url('../fonts/Pinyon_Script/PinyonScript-Regular.ttf');
+}
+
+h1 {
+    font-family: "Montserrat-Bold";
+    color: #ffffff;
+}
+
+h2 {
+    font-family: "Montserrat-Bold";
+    text-transform: uppercase;
+}
+
+p {
+    font-family: "Montserrat-Regular";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+.container-menu {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    padding: 1.5em;
+    background-color: #ffffff;
+    box-shadow: 3px 0 3px 2px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.container-menu .logo h1>a {
+    font-family: "PinyonScript";
+    font-size: 2rem;
+    color: #070D59;
+    text-decoration: none;
+}
+
+.container-menu .logo h1>a>span {
+    color: #F7B633;
+}
+
+.container-menu .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+}
+
+.container-menu .hamburger span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #070D59;
+}
+
+
+.container-menu ul.navigation {
+    display: none;
+}
+
+.container-menu ul.navigation.active {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 3px 0 3px 2px rgba(0, 0, 0, 0.1)
+}
+
+.container-menu ul.navigation.active li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 1em auto;
+}
+
+.container-menu ul.navigation.active li>a {
+    text-decoration: none;
+    font-family: "Montserrat-Regular";
+    font-size: 1.1rem;
+    color: #070D59;
+}
+
+/* HEADER - slider */
+
+.container-header {
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+.container-header .slide {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.container-header .slide.active-slide{
+    display: flex;
+}
+
+.container-header .slide h1 {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1em 0.5em;
+    border-radius: 30px;
+}
+
+.container-header .slide.first {
+    background-image: url(../images/bg-slide1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+}
+.container-header .slide.second {
+    background-image: url(../images/bg-slide2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+}
+.container-header .slide.third {
+    background-image: url(../images/bg-slide3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+}
+
+.container-header .slide h1>span::before {
+    content: "\A";
+    white-space: pre;
+
+}
+
+/* ABOUT US */
+
+.container-about_us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    padding: 1.5em;
+}
+.container-about_us .content p{
+    font-size: 1.1rem;
+    line-height: 1.5em;
+}
+.container-about_us .label {
+    margin-bottom: 1.5em;
+}
+
+.container-about_us .label h3 {
+    font-family: "PinyonScript";
+    font-size: 1.1rem;
+    color: #070D59;
+    margin-bottom: 0.5em;
+}
+
+.container-about_us .label h3>span {
+    color: #F7B633;
+}
+
+.container-about_us .label h2 {
+    font-size: 2.2rem;
+}
+
+.container-about_us .label h2>span::before {
+    content: "\A";
+    white-space: pre;
+}
+
+.container-about_us .label span.line {
+    display: block;
+    margin: auto;
+    margin-right: 0;
+    margin-top: 0.5em;
+    height: 4px;
+    width: 50px;
+    border-radius: 3px;
+    background-color: #F7B633;
+}
+
+/* BOXES */
+
+.container-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+    margin-top: 2em;
+    overflow-x: hidden;
+}
+
+.container-boxes .box {
+    display: flex;
+    width: 90%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 1em auto;
+    border-radius: 30px;
+    position: relative;
+}
+
+.container-boxes .box h2 {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2rem;
+}
+
+.container-boxes .box h2>a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container-boxes .box.cottages {
+    background-image: url(../images/bg-cottage.jpg);
+}
+
+.container-boxes .box.price {
+    background-image: url(../images/bg-price.jpg);
+}
+
+.container-boxes .box.reservations {
+    background-image: url(../images/bg-reservation.jpg);
+}
+
+
+/* PHOTO PARALLAX */
+
+.container-parallax {
+    position: relative;
+    margin-top: 3em;
+    width: 100%;
+    height: 250px;
+    background-attachment: initial;
+    background-color: #fff;
+    background-image: url(../images/bg-parallax.jpg);
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+/* SECTION WITH CIRCLES*/
+
+.container-circles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 1.5em;
+    width: 100%;
+    margin-top: 3em;
+}
+
+.container-circles .circle-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.container-circles .circle-box .icon {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 3px solid #5893D4;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    box-shadow: 0 0 7px 3px #5893D4;
+}
+
+.container-circles .circle-box:hover .icon {
+    box-shadow: 0 0 10px 5px #5893D4;
+    transition: 0.1s ease-in-out;
+}
+
+.container-circles .circle-box .icon img {
+    margin: auto;
+    width: auto;
+    height: 125px;
+}
+
+.container-circles .circle-box h4 {
+    font-family: "Montserrat-Bold";
+    font-size: 1.2rem;
+    color: #5893D4;
+    margin-top: 0.5em;
+}
+
+.container-circles .circle-box h4>span::before {
+    content: "\A";
+    white-space: pre;
+
+}
+
+
+/* RESERVATION */
+
+.container-reservation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/bg-slide1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    margin: auto;
+    margin-top: 2em;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container-reservation::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgba(31, 60, 136, 0.8);
+}
+
+.container-reservation h1 {
+    font-size: 1.6rem;
+    color: #ffffff;
+    z-index: 1;
+    margin-bottom: 1em;
+}
+
+.container-reservation button.btn-reservation {
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    padding: 0.2em 2em;
+    z-index: 1;
+}
+
+.container-reservation button.btn-reservation:hover {
+    background-color: #fff;
+}
+
+.container-reservation button.btn-reservation:hover a {
+    color: #070D59;
+}
+
+.container-reservation button.btn-reservation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Montserrat-Bold";
+    font-size: 1.4rem;
+    text-transform: uppercase;
+
+}
+
+/* SECTION CONTACT */
+
+.container-contact {
+    background-color: #5893d4;
+    padding-bottom: 2em;
+}
+
+.container-contact .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.container-contact .wrapper .map {
+    margin-top: 2em;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.4);
+}
+
+.container-contact .wrapper .contact-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1.5em;
+    margin-top: 1em;
+}
+
+.container-contact .wrapper .contact-information .logo h1 {
+    font-family: "PinyonScript";
+    font-size: 2.5rem;
+    color: #070D59;
+}
+
+.container-contact .contact-information .logo h1>span {
+    color: #F7B633;
+}
+
+.container-contact .wrapper .contact-information .phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+    margin-top: 1em;
+}
+
+.container-contact .wrapper .contact-information .phone img.icon-phone {
+    width: 50px;
+    margin-left: 20%;
+
+}
+
+.container-contact .wrapper .contact-information .phone a {
+    font-family: "Montserrat-Medium";
+    text-decoration: none;
+    color: #F7B633;
+    margin-left: 1.5em;
+}
+.container-contact .wrapper .contact-information .mail {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+    margin-top: 1em;
+}
+
+.container-contact .wrapper .contact-information .mail img.icon-mail {
+    width: 50px;
+    margin-left: 20%;
+
+}
+
+.container-contact .wrapper .contact-information .mail a {
+    font-family: "Montserrat-Medium";
+    text-decoration: none;
+    color: #F7B633;
+    margin-left: 1.5em;
+}
+
+.container-contact .wrapper .contact-information .address {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1em;
+    width: 300px;
+}
+
+.container-contact .wrapper .contact-information .address img.icon-address {
+    width: 50px;
+    margin-left: 20%;
+}
+
+.container-contact .wrapper .contact-information .address .text {
+    font-family: "Montserrat-Medium";
+    margin-left: 1.5em;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #F7B633;
+}
+
+/* FOOTER */
+
+.container-footer {
+    background-color: #F7B633;
+    padding: 1.5em;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.5rem
+}
+
+.container-footer .links ul {
+    display: flex;
+    list-style: none;
+}
+
+.container-footer .links ul>li {
+    padding: 1em;
+}
+
+.container-footer .links ul>li>a {
+    display: block;
+    text-decoration: none;
+    font-family: "Montserrat-Regular";
+    font-size: 0.7rem;
+    color: #070D59;
+    text-transform: uppercase;
+}
+
+/* PAGE COTTAGES */
+
+.container-cottages {
+    padding: 1.5em
+}
+
+.container-cottages .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/bg-cottages.JPG);
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-cottages .header h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.container-cottages p {
+    text-align: justify;
+    line-height: 1.5em;
+    margin: 1em 0;
+}
+
+.container-cottages .content ul {
+    font-family: "Montserrat-Regular";
+    font-size: 1rem;
+    padding-left: 2em;
+    line-height: 1.5em;
+}
+
+.container-cottages .gallery{
+    width: 100%;
+    margin-top: 1em !important;
+    margin: auto;
+}
+
+.container-cottages .gallery a>img{
+    width: 32%;
+}
+
+/* PAGE ABOUT US */
+
+.container-about_us-page {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
+
+.container-about_us-page .image {
+    height: 200px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../images/bg-about-us.JPG);
+    background-size: contain;
+}
+
+.container-about_us-page .image::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #ffffff;
+    border-right: 200px solid transparent;
+    z-index: 1;
+}
+
+.container-about_us-page .text {
+    z-index: 2
+}
+
+.container-about_us-page .text .label {
+    width: 300px;
+    margin-bottom: 1.5em;
+    margin-top: -2em;
+}
+
+.container-about_us-page .text .label h3 {
+    font-family: "PinyonScript";
+    font-size: 1.1rem;
+    color: #070D59;
+    margin-bottom: 0.5em;
+    z-index: 2;
+}
+
+.container-about_us-page .text .label h3>span {
+    color: #F7B633;
+}
+
+.container-about_us-page .text .label h2 {
+    font-size: 2.2rem;
+}
+
+.container-about_us-page .text .label h2>span::before {
+    content: "\A";
+    white-space: pre;
+}
+
+.container-about_us-page .text .label span.line {
+    display: block;
+    margin: auto;
+    margin-right: 55px;
+    margin-top: 0.5em;
+    height: 4px;
+    width: 50px;
+    border-radius: 3px;
+    background-color: #F7B633;
+}
+
+.container-about_us-page .text p {
+    margin-bottom: 1em;
+}
+
+
+/* PAGE PRICE */
+
+.container-price {
+    padding: 1.5em
+}
+
+.container-price .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/bg-price-page.JPG);
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 2em;
+}
+
+.container-price .header h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.container-price .content h3 {
+    font-family: "Montserrat-Bold";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: 2em;
+}
+
+.container-price p {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 1em 0;
+}
+
+.container-price .content ul {
+    font-family: "Montserrat-Regular";
+    font-size: 0.8rem;
+    padding-left: 2em;
+    line-height: 1.5em;
+}
+
+.container-price .content ul li>p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+.container-price .content a{
+    text-decoration: none;
+    color: #5893D4;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: "Montserrat-Regular";
+    padding-top: 1em !important; 
+}
+
+.table-wrapper {
+    width: auto;
+    margin: auto;
+}
+
+.table-wrapper table {
+    margin: 2em 0;
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: "Montserrat-Regular";
+}
+
+.table-wrapper table thead {
+    font-family: "Montserrat-Regular";
+    font-size: 1rem;
+    background-color: #F7B633;
+    line-height: 2em;
+}
+
+.table-wrapper table th {
+    width: 200px;
+}
+
+.table-wrapper table tr>td {
+    padding: 1em;
+    font-size: 0.7rem;
+    border-bottom: 1px solid gray;
+}
+
+
+@media (min-width:576px) {
+    .container-menu {
+        height: 50px;
+    }
+
+    .container-menu .logo h1>a {
+        font-size: 2.5rem;
+    }
+    .container-menu ul.navigation.active {
+        top: 50px;
+    }
+
+    .container-header .slide h1 {
+        padding: 1em 1.5em;
+    }
+    .container-about_us .content p{
+        font-size: 0.7rem;
+        line-height: 1.5em;
+    }
+    .container-boxes {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container-boxes .box {
+        width: 30%;
+        height: 300px;
+    }
+
+    .container-boxes .box h2 {
+        margin-bottom: 80%;
+        font-size: 1.5rem;
+    }
+
+    .container-parallax {
+        margin-top: 1em;
+        background-size: 100% auto;
+    }
+
+    .container-circles {
+        flex-direction: row;
+    }
+
+    .container-circles .circle-box .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container-circles .circle-box .icon img {
+        height: 70px;
+    }
+
+    .container-circles .circle-box h4 {
+        font-size: 0.7rem;
+    }
+
+    .container-reservation {
+        margin-top: 2em;
+        height: 230px;
+    }
+
+    .container-contact .wrapper .map {
+        height: 200px;
+    }
+
+    .container-cottages .header {
+        height: 200px;
+    }
+
+    .container-about_us-page .image {
+        width: 350px;
+    }
+
+    .container-about_us-page .image::before {
+        border: none;
+        left: auto;
+        right: 0;
+        border-bottom: 100px solid #ffffff;
+        border-left: 100px solid transparent;
+    }
+
+    .container-about_us-page .text .label {
+        margin: 0;
+        margin-left: 50%;
+        margin-top: -3em;
+        margin-bottom: 2em;
+    }
+    .container-about_us-page .text .content p{
+        font-size:0.6rem;
+        line-height: 1.5em;
+    }
+
+    .container-price .header {
+        height: 200px;
+    }
+    .container-price .content p{
+        font-size: 0.6rem;
+        line-height: 1.5em;
+    }
+    .container-price .content ul>li{
+        font-size: 0.6rem;
+        line-height: 1.5em;
+    }
+    .container-price .content ul>li>p{
+        font-size: 0.6rem;
+        line-height: 1.5em;
+    }
+    .table-wrapper {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .table-wrapper table {
+        font-size: 1rem;
+    }
+    .table-wrapper table thead {
+        font-size: 1rem;}
+
+    .table-wrapper table th {
+        width: 300px;
+    }
+    .table-wrapper table tr>td {
+        font-size: 0.8rem;
+    }
+
+    .container-cottages .content p{
+        font-size: 0.6rem;
+        line-height: 1.5em;
+    }
+    .container-cottages .content ul>li{
+        font-size: 0.6rem;
+        line-height: 1.5em;
+    }
+    .container-cottages .gallery a>img{
+        width: 24%;
+    }
+}
+
+@media (min-width:768px) {
+    .container-header .slide h1 {
+        font-size: 3rem;
+    }
+
+    .container-boxes .box h2 {
+        margin-bottom: 55%;
+    }
+
+}
+
+@media (min-width:1025px) {
+    .container-menu {
+        position: relative;
+        width: 100%;
+        height: 100px;
+    }
+
+    .container-menu .logo {
+        margin-left: 10%;
+    }
+    .container-menu .logo h1>a {
+        font-size: 3rem;
+    }
+
+    .container-menu .hamburger {
+        display: none;
+    }
+
+    .container-menu ul.navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        list-style: none;
+        margin-right: 10%;
+    }
+
+    .container-menu ul.navigation li {
+        display: block;
+        margin-right: 1.5em;
+        transition: 0.2s ease-in-out;
+    }
+
+    .container-menu ul.navigation li:nth-last-of-type(1) {
+        margin-right: 0;
+    }
+
+    .container-menu ul.navigation li>a {
+        text-decoration: none;
+        font-family: "Montserrat-Regular";
+        font-size: 1rem;
+        color: #070D59;
+    }
+
+    .container-menu ul.navigation li>a:hover {
+        color: #F7B633;
+    }
+
+    .container-header .slide h1 {
+        font-size: 4rem;
+    }
+
+    .container-about_us {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1150px;
+        margin: auto;
+        margin-top: 4em;
+    }
+
+    .container-about_us .label {
+        width: 250px;
+        margin-right: 3em;
+    }
+
+    .container-about_us .label h3 {
+        font-size: 1.8rem;
+    }
+
+    .container-about_us .label h2 {
+        margin-left: 45px;
+        ;
+    }
+
+    .container-about_us .label h2>span::before {
+        content: "\A";
+        white-space: pre;
+    }
+
+    .container-about_us .label h2>span::after {
+        content: "\A";
+        white-space: pre;
+    }
+
+    .container-about_us .content {
+        width: 100%;
+    }
+
+    .container-about_us .content p {
+        line-height: 1.7em;
+        font-size: 1.2rem;
+    }
+
+    .container-boxes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1150px;
+        margin: auto;
+        margin-top: 2.5em;
+    }
+
+    .container-boxes .box {
+        width: 30%;
+        height: 450px;
+    }
+
+    .container-boxes .box:hover {
+        box-shadow: 0 0 10px 3px #5893d4;
+        transition: 0.3s ease-out;
+    }
+
+    .container-boxes .box h2 {
+        margin: 0;
+        font-size: 2.2rem;
+    }
+
+    .container-boxes .box h2>a {
+        display: block;
+        line-height: 450px;
+    }
+
+    .container-parallax {
+        margin-top: 4em;
+        height: 350px;
+        background-attachment: fixed;
+    }
+
+    .container-circles {
+
+        width: 100%;
+        max-width: 1150px;
+        margin: auto;
+        margin-top: 4em;
+    }
+
+    .container-circles .circle-box .icon {
+        width: 180px;
+        height: 180px;
+    }
+
+    .container-circles .circle-box .icon img {
+        height: 100px;
+    }
+
+    .container-circles .circle-box h4 {
+        font-size: 1.1rem;
+    }
+
+    .container-reservation {
+        margin-top: 4em;
+        height: 400px;
+    }
+
+    .container-reservation h1 {
+        font-size: 2.5rem;
+    }
+
+    .container-reservation button.btn-reservation {
+        padding: 1em 5em;
+    }
+
+    .container-reservation button.btn-reservation a {
+        font-size: 2rem;
+    }
+
+    .container-contact {
+        padding-top: 4em;
+        padding-bottom: 6em;
+    }
+
+    .container-contact .wrapper {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        max-width: 1150px;
+        margin: auto;
+    }
+
+    .container-contact .wrapper .map {
+        width: 60%;
+        height: 400px;
+    }
+
+    .container-contact .wrapper .contact-information {
+        width: 40%;
+        height: 100%;
+        align-items: center;
+    }
+
+    .container-contact .wrapper .contact-information .logo {
+        margin-bottom: 2em;
+    }
+
+    .container-contact .wrapper .contact-information .logo h1 {
+        font-size: 3rem;
+    }
+
+    .container-contact .wrapper .contact-information .phone,
+    .container-contact .wrapper .contact-information .mail,
+    .container-contact .wrapper .contact-information .address {
+        width: 400px
+    }
+
+    .container-contact .wrapper .contact-information a,
+    .container-contact .wrapper .contact-information p {
+        font-size: 1.3rem;
+    }
+
+    .container-contact .wrapper .contact-information p {
+        margin-left: 10px;
+    }
+
+    .container-cottages {
+        margin: auto;
+        width: 100%;
+        max-width: 1150px;
+        
+    }
+    .container-cottages .header {
+        height: 300px;
+    }
+    .container-cottages .header h1 {
+        font-size: 3rem;
+    }
+    .container-cottages .content p{
+        font-size: 1.2rem;
+        line-height: 2em;
+    }
+    .container-cottages .content ul>li{
+        font-size: 1.2rem;
+        line-height: 2em;
+    }
+
+    .container-about_us-page {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        max-width: 1150px;
+    }
+
+    .container-about_us-page .image {
+        height: 500px;
+        width: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+    .container-about_us-page .image::before {
+        border: none;
+        border-bottom: 300px solid #ffffff;
+        border-left: 200px solid transparent;
+        z-index: 1;
+    }
+
+    .container-about_us-page .text {
+        width: 50%;
+        z-index: 2;
+        margin-left: 2em;
+    }
+
+    .container-about_us-page .text .label {
+        width: 300px;
+        margin: 0;
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+
+    .container-about_us-page .text .label h3 {
+        font-size: 1.5rem;
+    }
+
+    .container-about_us-page .text .label h2 {
+        font-size: 2.5rem;
+    }
+
+    .container-about_us-page .text .label span.line {
+        margin-right: 20px;
+    }
+
+    .container-about_us-page .text p {
+        font-size: 1.2rem;
+        line-height: 2em;
+        margin-bottom: 1em;
+    }
+
+    .container-price {
+        margin: auto;
+        width: 100%;
+        max-width: 1150px;
+    }
+
+    .container-price .header h1 {
+        font-size: 3rem;
+    }
+
+    .container-price .header {
+        height: 300px;
+    }
+    .container-price .content p{
+        font-size: 1.2rem;
+        line-height: 2em;
+    }
+    .container-price .content ul>li{
+        font-size: 1rem;
+        line-height: 1.8em;
+    }
+    .container-price .content ul>li>p{
+        font-size: 1rem;
+        line-height: 1.8em;
+    }
+}
