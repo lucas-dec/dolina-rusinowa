@@ -1,0 +1,81 @@
+@media (min-width: 576px) {
+  .container-about_us-page .image {
+    width: 350px;
+  }
+
+  .container-about_us-page .image::before {
+    border: none;
+    left: auto;
+    right: 0;
+    border-bottom: 100px solid #ffffff;
+    border-left: 100px solid transparent;
+  }
+
+  .container-about_us-page .text .label {
+    margin: 0;
+    margin-left: 50%;
+    margin-top: -3em;
+    margin-bottom: 2em;
+  }
+  .container-about_us-page .text .content p {
+    font-size: 0.6rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container-about_us-page {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-width: 1150px;
+  }
+
+  .container-about_us-page .image {
+    height: 500px;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .container-about_us-page .image::before {
+    border: none;
+    border-bottom: 300px solid #ffffff;
+    border-left: 200px solid transparent;
+    z-index: 1;
+  }
+
+  .container-about_us-page .text {
+    width: 50%;
+    z-index: 2;
+    margin-left: 2em;
+  }
+
+  .container-about_us-page .text .label {
+    width: 300px;
+    margin: 0;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+
+  .container-about_us-page .text .label h3 {
+    font-size: 1.5rem;
+  }
+
+  .container-about_us-page .text .label h2 {
+    font-size: 2.5rem;
+  }
+
+  .container-about_us-page .text .label span.line {
+    margin-right: 20px;
+  }
+
+  .container-about_us-page .text p {
+    font-size: 1.2rem;
+    line-height: 2em;
+    margin-bottom: 1em;
+  }
+}

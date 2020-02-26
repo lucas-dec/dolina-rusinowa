@@ -1,0 +1,149 @@
+/* PAGE PRICE */
+
+.container-price {
+  padding: 1.5em;
+}
+
+.container-price .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/bg-price-page.JPG);
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 2em;
+}
+
+.container-price .header h1 {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.container-price .content h3 {
+  font-family: "Montserrat-Bold";
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 2em;
+}
+
+.container-price p {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5em;
+  margin: 1em 0;
+}
+
+.container-price .content ul {
+  font-family: "Montserrat-Regular";
+  font-size: 0.8rem;
+  padding-left: 2em;
+  line-height: 1.5em;
+}
+
+.container-price .content ul li > p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+.container-price .content a {
+  text-decoration: none;
+  color: #5893d4;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: "Montserrat-Regular";
+  padding-top: 1em !important;
+}
+
+.table-wrapper {
+  width: auto;
+  margin: auto;
+}
+
+.table-wrapper table {
+  margin: 2em 0;
+  font-size: 0.8rem;
+  text-align: center;
+  font-family: "Montserrat-Regular";
+}
+
+.table-wrapper table thead {
+  font-family: "Montserrat-Regular";
+  font-size: 1rem;
+  background-color: #f7b633;
+  line-height: 2em;
+}
+
+.table-wrapper table th {
+  width: 200px;
+}
+
+.table-wrapper table tr > td {
+  padding: 1em;
+  font-size: 0.7rem;
+  border-bottom: 1px solid gray;
+}
+
+@media (min-width: 576px) {
+  .container-price .header {
+    height: 200px;
+  }
+  .container-price .content p {
+    font-size: 0.6rem;
+    line-height: 1.5em;
+  }
+  .container-price .content ul > li {
+    font-size: 0.6rem;
+    line-height: 1.5em;
+  }
+  .container-price .content ul > li > p {
+    font-size: 0.6rem;
+    line-height: 1.5em;
+  }
+  .table-wrapper {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .table-wrapper table {
+    font-size: 1rem;
+  }
+  .table-wrapper table thead {
+    font-size: 1rem;
+  }
+
+  .table-wrapper table th {
+    width: 300px;
+  }
+  .table-wrapper table tr > td {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container-price {
+    margin: auto;
+    width: 100%;
+    max-width: 1150px;
+  }
+
+  .container-price .header h1 {
+    font-size: 3rem;
+  }
+
+  .container-price .header {
+    height: 300px;
+  }
+  .container-price .content p {
+    font-size: 1.2rem;
+    line-height: 2em;
+  }
+  .container-price .content ul > li {
+    font-size: 1rem;
+    line-height: 1.8em;
+  }
+  .container-price .content ul > li > p {
+    font-size: 1rem;
+    line-height: 1.8em;
+  }
+}
